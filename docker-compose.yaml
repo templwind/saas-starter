@@ -1,0 +1,19 @@
+services:
+  github.com/templwind/echo-sass-starter:
+    build: 
+      context: .
+      target: dev
+    ports:
+      - 8888:8888
+    env_file:
+      - .env
+    privileged: true
+    volumes:
+      - .:/app
+    restart: always
+    networks:
+      - github.com/templwind/echo-sass-starter
+
+networks:
+  github.com/templwind/echo-sass-starter:
+    driver: bridge

@@ -1,0 +1,23 @@
+package dashboard
+
+import (
+	"github.com/templwind/sass-starter/internal/ui/components/appheader"
+	"github.com/templwind/sass-starter/internal/ui/layouts/applayout"
+)
+
+templ tpl(props *Props) {
+	@applayout.New(
+		applayout.WithTitle("Dashboard"),
+		applayout.WithConfig(props.Config),
+		applayout.WithRequest(props.Request),
+	) {
+		@appheader.New(
+			appheader.WithTitle("Billing"),
+			appheader.WithHideOnMobile(true),
+		)
+		<div class="prose">
+			<h1>Home</h1>
+			<p>Welcome to the dashboard</p>
+		</div>
+	}
+}

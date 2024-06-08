@@ -1,0 +1,40 @@
+package settings
+
+import (
+	"fmt"
+
+	"github.com/templwind/sass-starter/internal/ui/layouts/applayout"
+	"github.com/templwind/sass-starter/internal/ui/components/card"
+	"github.com/templwind/sass-starter/internal/ui/components/appheader"
+	"github.com/templwind/sass-starter/internal/ui/components/link"
+)
+
+templ tpl(props *Props) {
+	@applayout.New(
+		applayout.WithTitle("Encounter"),
+		applayout.WithConfig(props.Config),
+		applayout.WithRequest(props.Request),
+	) {
+		@appheader.New(
+			appheader.WithTitle("Settings"),
+		)
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+			for i, item := range props.Menu.MenuItems {
+				if !item.IsAtEnd && i >= 1 {
+					@link.New(
+						link.WithHXGet(item.Link),
+						link.WithHXSwap("innerHTML"),
+						link.WithHXTarget("#content"),
+						link.WithHXPushURL(true),
+						link.WithXOnTrigger(fmt.Sprintf("activeUrl = '%s'", item.Link)),
+					) {
+						@card.New(
+							card.WithTitle(item.Title),
+							card.WithLead(item.Lead),
+						)
+					}
+				}
+			}
+		</div>
+	}
+}

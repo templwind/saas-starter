@@ -1,0 +1,21 @@
+package billing
+
+import (
+	"github.com/templwind/sass-starter/internal/config"
+	"github.com/templwind/sass-starter/internal/ui/layouts/applayout"
+
+	"github.com/labstack/echo/v4"
+	"github.com/templwind/sass-starter/internal/templwind/components/appheader"
+)
+
+templ tpl(props *Props) {
+	@applayout.New(
+		applayout.WithTitle("Encounter"),
+		applayout.WithConfig(props.Config),
+		applayout.WithRequest(props.Request),
+	) {
+		@appheader.New(
+			appheader.WithTitle("Billing"),
+		)
+	}
+}

@@ -1,0 +1,11 @@
+<div class=\"w-full antialiased\"><div><h2 class=\"py-2 text-xl font-semibold\">Account Details</h2><div class=\"w-full\"><div class=\"text-slate-900 divide-y divide-slate-200 dark:text-white dark:divide-slate-700\"><h4 class=\"mb-1 text-slate-500 dark:text-slate-400\">Company Name</h4><p class=\"font-semibold\">
+</p><h4 class=\"mb-1 text-slate-500 dark:text-slate-400\">Address</h4><p class=\"font-semibold\">
+ 
+<br>
+, 
+ 
+</p><h4 class=\"mb-1 text-slate-500 dark:text-slate-400\">Phone</h4><p class=\"font-semibold\">
+</p><h4 class=\"mb-1 text-slate-500 dark:text-slate-400\">Account Created</h4><p class=\"font-semibold\">
+</p><h4 class=\"mb-1 text-slate-500 dark:text-slate-400 flex flex-col sm:flex-row justify-between items-baseline\">Primary User <button class=\"inline-flex text-sm font-normal text-blue-600 underline underline-offset-4 decoration-2\">Change</button></h4><p class=\"font-semibold\">
+<br>
+</p></div></div></div></div>
